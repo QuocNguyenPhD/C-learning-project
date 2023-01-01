@@ -46,20 +46,14 @@ int main(){
 
 	}
 	else if(choice==2){
-		std::cout<< "username" <<std::endl;
-		std::cin>> username;
 
-		std::cout<< "password" <<std::endl;
-		std::cin>> password;
 		bool status = login();
 		if(status){
 			std::cout<< "successfuly login" << std::endl;
-			system("PAUSE");
 			return 1;
 		}
 		else{
 			std::cout<< "fail to login"<< std::endl;
-			system("PAUSE");
 			return 0;
 
 		}
