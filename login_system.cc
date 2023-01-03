@@ -26,7 +26,7 @@ bool login(){
 }
 
 
-int main(){
+bool account(){
 	int choice;
 	std::string username, password;
 	std::cout<< "1) register:  \n2) login:  \n*) your choice: " << std::endl;
@@ -43,6 +43,22 @@ int main(){
 		file.open("data\\"+ username +".txt");
 		file<< username<< std::endl;
 		file<< password<< std::endl;
+		file.close();
+
+		std::cout<<"your account has been created please login" << std::endl;
+
+		bool status = login();
+		if(status){
+			std::cout<< "successfuly login" << std::endl;
+			return true;
+		}
+		else{
+			std::cout<< "fail to login"<< std::endl;
+			return false;
+
+		}
+		
+		
 
 	}
 	else if(choice==2){
@@ -50,11 +66,11 @@ int main(){
 		bool status = login();
 		if(status){
 			std::cout<< "successfuly login" << std::endl;
-			return 1;
+			return true;
 		}
 		else{
 			std::cout<< "fail to login"<< std::endl;
-			return 0;
+			return false;
 
 		}
 
