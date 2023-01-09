@@ -3,6 +3,8 @@
 int main(){
     
     if(account()){
-        ofstream("car_option.txt")
+        ofstream("car_option.txt");
+        
+        
     }
 }

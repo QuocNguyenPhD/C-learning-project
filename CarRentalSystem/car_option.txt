@@ -1,0 +1,3 @@
+tesla 2022 white 100
+honda 2020 blue 90
+toyota 2021 black 90
